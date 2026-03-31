@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Oswald:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap');
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #d4d0c8;
+  font-family: 'Source Serif 4', serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #0d0d0d;
+  border-bottom: 2px solid #cc0000;
+  position: relative;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: table;
+  width: 100%;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  text-decoration: none;
+  display: table-cell;
+  vertical-align: middle;
+  width: 1%;
+  white-space: nowrap;
+}
+
+.logo-emblem {
+  width: 44px;
+  height: 44px;
+  border: 2px solid #cc0000;
+  background-color: #1a0000;
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #cc0000;
+  letter-spacing: 0.08em;
+  line-height: 42px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo-info {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 14px;
+  border-left: 2px solid #330000;
+  margin-left: 14px;
+}
+
+.logo-text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #e8e4dc;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  display: block;
+}
+
+.logo-sub {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: #808078;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 2px;
+}
+
+/* ===== NAV ===== */
+nav {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+}
+
+nav a {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #858580;
+  text-decoration: none;
+  padding: 6px 11px;
+  border: 1px solid transparent;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #cc0000;
+  border-color: #660000;
+  background-color: #1a0000;
+}
+
+/* Hamburger - hidden on desktop */
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  float: right;
+  margin-top: 14px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #909088;
+  margin-bottom: 5px;
+}
+
+.nav-toggle span:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== MAIN LAYOUT ===== */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+/* ===== CLASSIFICATION BANNER ===== */
+.classification-banner {
+  background-color: #660000;
+  border: 1px solid #cc0000;
+  color: #ff6060;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 32px;
+}
+
+/* ===== ARTICLE HEADER ===== */
+.article-header {
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.item-number {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  color: #82827a;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.item-number span {
+  color: #c8a040;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #e8e4dc;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+/* ===== OBJECT CLASS BADGE ===== */
+.object-class {
+  display: inline-block;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.class-label {
+  color: #7c7c74;
+  margin-right: 10px;
+}
+
+.class-badge {
+  padding: 5px 13px;
+  font-weight: bold;
+  border: 1px solid #2a2a2a;
+  display: inline-block;
+}
+
+.class-badge.safe {
+  background-color: #0d1f10;
+  border-color: #2a6030;
+  color: #60c070;
+}
+
+.class-badge.euclid {
+  background-color: #1f1005;
+  border-color: #804010;
+  color: #d08040;
+}
+
+.class-badge.keter {
+  background-color: #1f0005;
+  border-color: #800010;
+  color: #e04050;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  margin-bottom: 32px;
+}
+
+.section-header {
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #cc0000;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #660000;
+}
+
+.section-header::before {
+  content: '// ';
+  color: #6a0000;
+}
+
+h2,
+h3,
+h4 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  color: #e8e4dc;
+  letter-spacing: 0.05em;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 21px;
+}
+
+h3 {
+  font-size: 14px;
+  color: #cc0000;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 14px;
+  color: #c8a040;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+p {
+  margin-bottom: 16px;
+  color: #d4d0c8;
+}
+
+/* ===== IMAGE ===== */
+.scp-image-wrap {
+  margin: 24px 0;
+  border: 1px solid #2a2a2a;
+  background-color: #111111;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.scp-image-wrap img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  opacity: 0.9;
+}
+
+.img-caption {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #787870;
+  padding: 6px 10px;
+  letter-spacing: 0.05em;
+  border-top: 1px solid #2a2a2a;
+}
+
+/* ===== DOCUMENT BLOCKS ===== */
+.document-block {
+  background-color: #111111;
+  border: 1px solid #2a2a2a;
+  border-left: 3px solid #c8a040;
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  color: #a8c080;
+  line-height: 1.8;
+}
+
+.document-block p {
+  color: #a8c080;
+  margin-bottom: 8px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+}
+
+.document-block p:last-child {
+  margin-bottom: 0;
+}
+
+code {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  color: #a8c080;
+}
+
+/* ===== ORDERED LIST ===== */
+ol {
+  padding-left: 0;
+  list-style: none;
+  counter-reset: scp-counter;
+}
+
+ol li {
+  counter-increment: scp-counter;
+  padding: 12px 16px 12px 48px;
+  margin-bottom: 8px;
+  background-color: #111111;
+  border: 1px solid #2a2a2a;
+  position: relative;
+  font-size: 14px;
+}
+
+ol li::before {
+  content: counter(scp-counter, decimal-leading-zero);
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #cc0000;
+  font-weight: bold;
+}
+
+/* ===== CHRONOLOGY TABLE ===== */
+.chrono-entry {
+  display: table;
+  width: 100%;
+  padding: 12px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.chrono-date {
+  display: table-cell;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #c8a040;
+  white-space: nowrap;
+  padding-top: 2px;
+  padding-right: 24px;
+  vertical-align: top;
+  width: 1%;
+}
+
+.chrono-text {
+  display: table-cell;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+/* ===== ADDENDUM ===== */
+.addendum {
+  background-color: #141414;
+  border: 1px solid #2a2a2a;
+  border-top: 2px solid #c8a040;
+  padding: 20px 24px;
+  margin-top: 20px;
+}
+
+.addendum-title {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #c8a040;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #0d0d0d;
+  border-top: 1px solid #2a2a2a;
+  padding: 24px;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: #767670;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+footer a {
+  color: #767670;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #cc0000;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media screen and (max-width: 700px) {
+  .header-inner {
+    height: 56px;
+    display: table;
+    width: 100%;
+  }
+
+  .logo {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .nav-toggle {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    width: 1%;
+    white-space: nowrap;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    background-color: #0d0d0d;
+    border-bottom: 2px solid #cc0000;
+    text-align: left;
+  }
+
+  nav.open {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 13px;
+    margin-left: 0;
+    margin-bottom: 4px;
+  }
+
+  main {
+    padding: 24px 16px 48px;
+  }
+
+  .chrono-entry {
+    display: block;
+  }
+
+  .chrono-date {
+    display: block;
+    padding-right: 0;
+    margin-bottom: 4px;
+    width: auto;
+  }
+
+  .chrono-text {
+    display: block;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo-text {
+    font-size: 14px;
+  }
+
+  .logo-sub {
+    display: none;
+  }
+}
